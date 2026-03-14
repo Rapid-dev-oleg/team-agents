@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 Team Dashboard - AI Agents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .status-available { background-color: #10b981; }
+        .status-busy { background-color: #f59e0b; }
+        .task-backlog { border-left: 4px solid #6b7280; }
+        .task-in_progress { border-left: 4px solid #3b82f6; }
+        .task-done { border-left: 4px solid #10b981; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Заголовок -->
+        <div class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-gray-800">
+                <i class="fas fa-robot mr-3 text-blue-500"></i>
+                Team Dashboard - AI Agents Management
+            </h1>
+            <p class="text-gray-600 mt-2">Управление командой AI агентов для разработки сайтов</p>
+            <div class="mt-4 inline-flex items-center bg-blue-50 text-blue-700 px-4 py-2 rounded-lg">
+                <i class="fas fa-globe mr-2"></i>
+                <span>Демо-версия | GitHub: <a href="https://github.com/Rapid-dev-oleg/team-agents" class="underline">Rapid-dev-oleg/team-agents</a></span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Агенты -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">
+                        <i class="fas fa-users mr-2"></i> Команда агентов
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Design Architect -->
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-bold text-gray-800">Design Architect</h3>
+                                    <div class="flex items-center mt-1">
+                                        <span class="inline-block w-3 h-3 rounded-full mr-2 bg-green-500"></span>
+                                        <span class="text-sm text-green-600">Доступен</span>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded mr-1 mb-1">Figma</span>
+                                        <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded mr-1 mb-1">UX/UI</span>
+                                        <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded mr-1 mb-1">Prototyping</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fullstack Builder -->
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-bold text-gray-800">Fullstack Builder</h3>
+                                    <div class="flex items-center mt-1">
+                                        <span class="inline-block w-3 h-3 rounded-full mr-2 bg-green-500"></span>
+                                        <span class="text-sm text-green-600">Доступен</span>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-1 mb-1">Next.js</span>
+                                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-1 mb-1">React</span>
+                                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-1 mb-1">Node.js</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Deploy & SEO -->
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-bold text-gray-800">Deploy & SEO</h3>
+                                    <div class="flex items-center mt-1">
+                                        <span class="inline-block w-3 h-3 rounded-full mr-2 bg-green-500"></span>
+                                        <span class="text-sm text-green-600">Доступен</span>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded mr-1 mb-1">Vercel</span>
+                                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded mr-1 mb-1">SEO</span>
+                                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded mr-1 mb-1">DevOps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <h3 class="font-bold text-gray-700 mb-2">Статистика:</h3>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-gray-50 p-3 rounded">
+                                <div class="text-2xl font-bold text-green-600">3</div>
+                                <div class="text-sm text-gray-600">Доступно</div>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded">
+                                <div class="text-2xl font-bold text-orange-600">0</div>
+                                <div class="text-sm text-gray-600">Занято</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Задачи и информация -->
+            <div class="lg:col-span-2">
+                <!-- Информация -->
+                <div class="bg-white rounded-lg shadow p-6 mb-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">
+                        <i class="fas fa-info-circle mr-2 text-blue-500"></i> О проекте
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-bold text-gray-700">🎯 Что это?</h3>
+                            <p class="text-gray-600">Система управления командой AI агентов для разработки сайтов под ключ.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="font-bold text-gray-700">🚀 Возможности</h3>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Автоматическая разработка сайтов</li>
+                                <li>Управление через Dashboard и Telegram</li>
+                                <li>CI/CD автоматизация</li>
+                                <li>SEO оптимизация</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="font-bold text-gray-700">📊 Технологии</h3>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Next.js</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">React</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">GitHub Actions</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Telegram Bot API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Демо задачи -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">
+                        <i class="fas fa-tasks mr-2"></i> Активные задачи
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Задача 1 -->
+                        <div class="border border-gray-200 rounded-lg p-4 task-in_progress">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <div class="flex items-center">
+                                        <span class="font-bold text-gray-800 mr-3">#1 Сайт для канала AI Бизнес</span>
+                                        <span class="text-xs px-2 py-1 rounded bg-red-100 text-red-800">
+                                            🔴 Высокий приоритет
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 text-sm text-gray-600">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-calendar-alt mr-2"></i>
+                                            <span>Дедлайн: 2026-03-17</span>
+                                        </div>
+                                        <div class="flex items-center mt-1">
+                                            <i class="fas fa-user mr-2"></i>
+                                            <span>Агент: Design Architect</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <span class="inline-block px-3 py-1 text-sm rounded-full bg-blue-100 text-blue-800">
+                                        🚀 В работе
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Задача 2 -->
+                        <div class="border border-gray-200 rounded-lg p-4 task-backlog">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <div class="flex items-center">
+                                        <span class="font-bold text-gray-800 mr-3">#2 Настроить автоматический деплой</span>
+                                        <span class="text-xs px-2 py-1 rounded bg-yellow-100 text-yellow-800">
+                                            🟡 Средний приоритет
+                                        </span>
+                                    </div>
+                                    <div class="mt-2 text-sm text-gray-600">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-calendar-alt mr-2"></i>
+                                            <span>Дедлайн: 2026-03-20</span>
+                                        </div>
+                                        <div class="flex items-center mt-1">
+                                            <i class="fas fa-user mr-2"></i>
+                                            <span>Агент: Deploy & SEO</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <span class="inline-block px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-800">
+                                        ⏳ Ожидание
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <h3 class="font-bold text-gray-700 mb-3">🚀 Быстрый старт</h3>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <code class="text-sm block mb-2">git clone https://github.com/Rapid-dev-oleg/team-agents</code>
+                            <code class="text-sm block mb-2">cd team-agents/dashboard</code>
+                            <code class="text-sm block">node simple-server.js</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>🤖 Team Dashboard v1.0 | Управление AI агентами разработки</p>
+            <p class="mt-1">
+                <a href="https://github.com/Rapid-dev-oleg/team-agents" class="text-blue-500 hover:underline">GitHub</a> • 
+                <a href="https://t.me/aibusinessauto" class="text-blue-500 hover:underline">Telegram канал</a> • 
+                <a href="http://localhost:3000" class="text-blue-500 hover:underline">Локальный Dashboard</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
