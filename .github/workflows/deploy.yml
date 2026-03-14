@@ -1,0 +1,37 @@
+name: Deploy Dashboard
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        cd dashboard
+        npm install express
+        
+    - name: Deploy to Vercel (placeholder)
+      run: |
+        echo "🚀 Dashboard готов к деплою!"
+        echo "📊 URL: http://localhost:3000 (локально)"
+        echo "🌐 Для деплоя на Vercel:"
+        echo "  1. Установи Vercel CLI: npm i -g vercel"
+        echo "  2. Запусти: vercel --prod"
+        
+    - name: Send notification
+      run: |
+        echo "✅ Репозиторий обновлен: https://github.com/Rapid-dev-oleg/team-agents"
+        echo "📦 Коммит: ${{ github.sha }}"
